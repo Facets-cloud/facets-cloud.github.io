@@ -20,23 +20,25 @@
     .icon{
       float: left;
       border: 1px solid #fff;
-      width: 80px;
-      height: 80px;
+      width: 50px;
+      height: 50px;
       text-align: center;
       border-radius: 50%;
       transition: all .6s ease;
       -moz-transition: all .6s ease;
       -webkit-transition: all .6s ease;
       i{
-        font-size: 36px;
+        font-size: 30px;
         color: #fff;
-        line-height: 80px;
+        line-height: 50px;
       }       
     }     
   }
   .feature-content{
     color: #fff;
-    margin-left: 100px;
+    margin-left: 70px;
+    font-size: 22px;
+    margin-top:10px;
     h3{
       color: #fff;
       text-transform: uppercase;
