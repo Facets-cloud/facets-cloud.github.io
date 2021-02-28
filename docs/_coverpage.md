@@ -1,4 +1,4 @@
-![logo](_media/logo_blue.png)
+![logo](media/logo_blue.png)
 
 # Facets.cloud Documentation <small>v 0.1</small>
 
