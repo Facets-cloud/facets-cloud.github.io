@@ -6,18 +6,7 @@ S3 uploader application needs to be deployed in a VPC and has various components
 >Awesomeness Inc. is a **Facets customer** and has its own control plane. We will sit through the company's journey of creation of these stacks in Facets product.
 
 
-## Declare
+## Demo
 
-[![Declare](https://img.youtube.com/vi/5_ZdlguVZDg/hqdefault.jpg)](https://www.youtube.com/watch?v=5_ZdlguVZDg)
-
-
-## Deploy
-
-[![Deploy](https://img.youtube.com/vi/p36sSg3G7hI/hqdefault.jpg)](https://www.youtube.com/watch?v=p36sSg3G7hI)
-
-
-## Operate
-
-[![Operate](https://img.youtube.com/vi/8uN-JnU3hLM/hqdefault.jpg)](https://www.youtube.com/watch?v=8uN-JnU3hLM)
-
+[![Declare](https://img.youtube.com/vi/bP3DOJccpx0/hqdefault.jpg)](https://www.youtube.com/watch?v=bP3DOJccpx0)
 
