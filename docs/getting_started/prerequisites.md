@@ -7,7 +7,7 @@ Following are few guidelines to follow while containerising your applications or
 > Checkout the best practices for creating a docker image [here](https://cloud.google.com/solutions/best-practices-for-building-containers) and [here](https://docs.docker.com/develop/dev-best-practices/)
 
 **Logging:**
- - Log your applications to stdout and stderr. 
+ - Applications must log into stdout/stderr and not files. 
  >Read [here](https://howtodoinjava.com/log4j/log4j-console-appender-example/) for java application
 
 **Environment Variables:**
