@@ -8,5 +8,5 @@ S3 uploader application needs to be deployed in a VPC and has various components
 
 ## Demo
 
-[![Declare](https://img.youtube.com/vi/bP3DOJccpx0/hqdefault.jpg)](https://www.youtube.com/watch?v=bP3DOJccpx0)
+[![Declare](https://img.youtube.com/vi/3rUbPEyIHOU/hqdefault.jpg)](https://www.youtube.com/watch?v=3rUbPEyIHOU)
 
