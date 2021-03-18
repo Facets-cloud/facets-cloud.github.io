@@ -2,4 +2,8 @@
 
 This is the home page of the documentation. 
 
-##Coming Soon
+## Topics
+
+* [Prerequisites - Onboarding Applications to facets](getting_started/prerequisites.md)
+
+## Full Documentation is Coming Soon
