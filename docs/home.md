@@ -1,6 +1,6 @@
 # Facets 
 
-Facets.cloud simplifies the creation, deployment and day-to-day operations of a cloud foot-print of a product over multiple deployments across multiple clouds. 
+Facets.cloud simplifies the creation, deployment and day-to-day operations of a product over multiple deployments across multiple clouds. 
 Any cloud deployment managed by Facets ships with best-practice observability, security, disaster recovery  and compliance suits powered by opensource and commercial tools.
 A deployment is a complete manifestation of the following underlying components
 * Applications (Micro-services)
@@ -15,23 +15,24 @@ The wiki is organized in the following sections
 
 
 ## Onboarding your product on Facets 
-Onboarding your product to facets is three simple steps. 
+
 ### [1\. Declare - Define a product in Facets Stack Definition Language](fsdl/README.MD)
 
 Facets stack definition language enables you to define your complete product as a stack.
 A stack is a easy to write JSON that is committed as a git repository. Typical contents of a stack is
+
 * Application
-    * Image to use or a CI integration
-    * Liveliness and Readiness checks
-    * Credential Requests
-    * Ingress rules
+  * Image to use or a CI integration
+  * Liveliness and Readiness checks
+  * Credential Requests
+  * Ingress rules
 * Infrastructure
-    * Type
-    * Service name
-* Database
-    * Schema of the tables
-    * Seed data
-    
+  * Type
+  * Service name
+* Databases
+  * Schema of the tables
+  * Seed data
+  
 Now you can create a few clusters out of this stack.   
 
 ### [2\. Deploy - Create a few clusters out of the stack](deploy/README.md)
