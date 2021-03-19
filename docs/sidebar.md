@@ -1,3 +1,5 @@
-* [Home](home.md)
-* [Prerequisites](getting_started/prerequisites.md)
+* [A Quick Walkthrough](home.md)
+* [Facets Stack Definition Language](fsdl/README.md)
+* [Deploying your cluster](deploy/README.md)
+* [Day2 Operations](operate/README.md)
 * [Demo](getting_started/demo.md)

@@ -1,5 +1,3 @@
-# Facets Stack Definition Language<!-- {docsify-ignore-all} -->
+# Facets Stack Definition Language
 
-## Heading 1 
-
-## Heading 2
+Coming soon..
