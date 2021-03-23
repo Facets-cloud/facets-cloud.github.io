@@ -1,5 +1,6 @@
 * [A Quick Walkthrough](home.md)
 * [Facets Stack Definition Language](fsdl/README.md)
 * [Deploying your cluster](deploy/README.md)
-* [Day2 Operations](operate/README.md)
+* [Day 2 Operations](operate/README.md)
+  * [Security Controls](compliance/README.md)
 * [Demo](getting_started/demo.md)
