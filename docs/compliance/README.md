@@ -57,7 +57,9 @@ A cloud launched by Facets will have [ModSecurity](https://github.com/SpiderLabs
 > application stack definition. Facets injects [ModSecurity](https://github.com/SpiderLabs/ModSecurity) with [OWASP ModSecurity Core Rule Set](https://github.com/coreruleset/coreruleset). 
 > Similar to Falco, the output is sent to prometheus/grafana and can be optionally relayed to third party monitoring tools like Newrelic as well. 
 > An information Security personnel can write required rules for alerting.
-> 
+
+![ModSec Dashboard](../media/modsec.png)
+
 ## Security Practices
 
 ### Network, Security and IAM
