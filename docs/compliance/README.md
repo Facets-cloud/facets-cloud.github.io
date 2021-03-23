@@ -50,6 +50,7 @@ the falco features [here](https://falco.org/docs/).
 prometheus for the infromation security team to monitor and custommize the standard dashboards provided by Facets. 
 Additionally, if a paid tool like [Newrelic](https://newrelic.com/) is enabled, these metrics automatically gets pushed to Newrelic for a cluster-wide view.
 
+![Falco Dashboard](../media/falco.png)
 
 ## Firewall (NIDS)
 A cloud launched by Facets will have [ModSecurity](https://github.com/SpiderLabs/ModSecurity) installed at the ingress points.
