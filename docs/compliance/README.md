@@ -24,10 +24,10 @@ This excludes any thirdparty infrastructure to come additionally in the security
 ### High level deployment model
 
 
-Any cluster deployed through Facets.cloud follows best practices of the cloud vendor. For e.g., in the case of AWS, the 
-underlying infrastructure contains an EKS cluster hosted inside a VPC. By default, there is no direct connectivity to the EKS 
+Any cluster deployed through Facets.cloud follows best practices recommended by the cloud vendor. For e.g., in the case of AWS, the 
+underlying infrastructure contains an EKS cluster hosted inside private subnet of a VPC. By default, there is no direct connectivity to the EKS 
 cluster from outside unless an application explicitly specifies it. This specification if provided, goes through the Stack definition of the application
-and hence checked in a git repository. Apart from the advantages of this practice being declarative in nature, specific to security and compliance - 
+and hence checked in a git repository. Apart from the advantages of this practice being declarative in nature, specific to security and compliance, it provides the following advantages -
 * Named (Who created/updated it)
 * Version controlled 
 * Process controlled (Secondary sign-off using PR Reviews)
@@ -39,7 +39,7 @@ and hence checked in a git repository. Apart from the advantages of this practic
 [ClamAV](https://www.clamav.net/) are installed in every node launched by Facets. Facets is responsible for updating and ensuring 
 the ClamAV agents are running all the time. 
 >ClamAV antivirus scan results are pushed to a permanent storage from which
-the results can be downloaded.
+the results can be downloaded. In future, these results will be available in SIEM dashboard as well.
 
 ## Security Information and Event Management (SIEM)
 Facets.cloud comes with pre-integration with [Falco](https://falco.org/). Falco provides the cloud-native runtime security
@@ -57,7 +57,7 @@ A cloud launched by Facets will have [ModSecurity](https://github.com/SpiderLabs
 > Any application developer who wants to expose a web server port to the outside world must define an ingress rule in the 
 > application stack definition. Facets injects [ModSecurity](https://github.com/SpiderLabs/ModSecurity) with [OWASP ModSecurity Core Rule Set](https://github.com/coreruleset/coreruleset). 
 > Similar to Falco, the output is sent to prometheus/grafana and can be optionally relayed to third party monitoring tools like Newrelic as well. 
-> An information Security personnel can write required rules for alerting.
+> An information Security personnel can customize the rules for alerting.
 
 ![ModSec Dashboard](../media/modsec.png)
 
@@ -67,7 +67,7 @@ A cloud launched by Facets will have [ModSecurity](https://github.com/SpiderLabs
 
 * All resources are provisioned by Facets during the cluster launch and update based on CredentialRequests. The credentials 
 requested by any application is only available to that application.
-* QA, Stage and production environments are created separately in Facets and they don't share anything
+* QA, Stage and production environments are created separately in Facets with share nothing principles.
 * All physical resources are created in private subnet of the VPC and only uses a NAT gateway for outbound traffic  
 * By default, no network traffic is allowed to the network with deny-all policies. Any application that needs an ingress route
 is injected by a [ModSecurity](https://github.com/SpiderLabs/ModSecurity) WAF. This is as per the DMZ (De-Militarized Zone)
@@ -79,8 +79,8 @@ best practices.
 
 * Database, Cloud resource secrets are requested by the applications in the stack definitions and fulfilled by facets at the cluster launch. This eliminates any need
 of a manual password or access creation that can potentially expose risk of leakage.
-* All PVCs are encrypted and cloud-native databases like Aurora are provisioned with the best practice security policies.
-* Certificate management happpens on the cloud provider like AWS certificate manager and required SSL and TLS configurations adopted that 
+* All PVCs are encrypted and cloud-native databases like Aurora are provisioned with the best practice security policies like **encryption at rest**. 
+* Certificate management happpens on the cloud provider like AWS Certificate Manager (**ACM**) and required SSL and TLS configurations adopted that 
 are recommended by the cloud provider.
   
 
@@ -91,7 +91,7 @@ are recommended by the cloud provider.
 cluster for maintenance activities. This token expires in 24 hours.
   ![Access Token](../media/access.png) 
 * The user privileges are controlled by the admins of Facets control plane.
-* Any management port exposed that is required to be exposed by the application/service uses a **tools** ingress that is 
+* Any management port that is required to be exposed by the application/service uses a **tools** ingress that is 
 password protected. Facets comes with pre-integration with Zero trust Application Access systems such as [Cloudflare Access](https://www.cloudflare.com/teams/access/).
   
 
