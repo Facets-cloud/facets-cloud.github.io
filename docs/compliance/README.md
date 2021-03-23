@@ -89,6 +89,7 @@ are recommended by the cloud provider.
 
 * Just in time, temporary credentials are issued in the Facets control plane for anyone who wants to access the kubernetes
 cluster for maintenance activities. This token expires in 24 hours.
+  ![Access Token](../media/access.png) 
 * The user privileges are controlled by the admins of Facets control plane.
 * Any management port exposed that is required to be exposed by the application/service uses a **tools** ingress that is 
 password protected. Facets comes with pre-integration with Zero trust Application Access systems such as [Cloudflare Access](https://www.cloudflare.com/teams/access/).
