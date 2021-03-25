@@ -55,13 +55,6 @@ Once your cluster is created, the following operations are possible on the contr
 * Access your security postures from the dashboard
 * Give access to your infosec team to download compliance reports
 * Temporary credentials for developers to login and do manual maintenance 
-
-## [Roadmap](roadmap/README.md)
-The roadmap is classified in the following aspects. 
-* New Cloud support
-* New Observability features such as anomaly detection
-* New opensource and paid Security tools integration
-* New Deployment strategies
-* Cost Facets - Helps you analyze cloud cost    
+ 
 ## Resources
 * [Demo Videos](getting_started/demo.md)
