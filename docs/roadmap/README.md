@@ -19,7 +19,7 @@ Epic | Roadmap | Jobs To Be Done (JTBD) |
 Epic | Roadmap | Jobs To Be Done (JTBD) |
 -------|-------------------| ----------
 `Multi-Cloud`| Object Storage Gateway|Developers can define / use cloud storage like S3 agnostic of the cloud/hybrid/on-prem|
-`Customer Request`| Mongo Labs Integration| Developers can run heavy mongo instances on Mongo Labs / Atlas |
+`Customer Request`| MongoDB Atlas support| Developers can run heavy mongo instances on MongoDB Atlas |
 `Business Continuity`| Disaster Recovery Drill| Define a backup region during a cluster launch and can perform DR|
 `Deployment Strategies` | Blue-Green Deployment | DevOps can choose Blue-Green deployment as a deployment strategy among others|
 `Unified Observability` | Istio deployment| DevOps teams can use Istio as a service mesh|
