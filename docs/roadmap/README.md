@@ -8,7 +8,7 @@ Epic | Roadmap | Jobs To Be Done (JTBD) |
 `Extensibility` | Plugin Model (GA)| Devops Teams can write a complete facet module and deploy|
 `Unified Observability` | Real Time Log Alerts| Developers will receive commonly found log based alerts and custom rules|
 `Infosec Enablement` | Unified Compliance Dashboard|Infosec teams can monitor/pull information specific to the compliance needs from a single dashboard|
-`Developer Productivity` | [`Facets.local`](../deploy/local.md) distribution mechanism|Developers will be able to deploy [`Facets.local`](../deploy/local.md) of their [FSDL](../fsdl/README.md) stack locally with a single click|
+`Developer Productivity` | [`Facets.local`](/deploy/local.md) distribution mechanism|Developers will be able to deploy [`Facets.local`](/deploy/local.md) of their [FSDL](/fsdl/README.md) stack locally with a single click|
 `Unified Observability` | Application Custom Metrics|Developers can define metric scraping in an easy to define FSDL|
 `Deployment Strategies` | Canary Deployment | DevOps can choose [Canary deployment](https://semaphoreci.com/blog/what-is-canary-deployment) as a deployment strategy among others|
 `Multi-Cloud`| Azure Support for Common Infra ([AKS](https://azure.microsoft.com/en-in/services/kubernetes-service/) + [Blob](https://azure.microsoft.com/en-in/services/storage/blobs/)| Developers can deploy a stack on Azure for cloud agnostic components|
