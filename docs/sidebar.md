@@ -11,3 +11,4 @@
 * [Troubleshoot](troubleshoot/README.md)
 * [Concepts](concept/README.md)
 * [Roadmap](roadmap/README.md)
+* [Request a feature](roadmap/request.md)
