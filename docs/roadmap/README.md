@@ -26,7 +26,7 @@ Epic | Roadmap | Jobs To Be Done (JTBD) |
 `Customer Request` | Postgres Integration| Developers can use Postgres as a FSDL component with schema management|
 `Multi-Cloud`| Azure Database Service (MySQL), Monitor, app gateway| Developers can use cloud native solutions for these services on Azure|
 `Multi-Cloud`| GCP Support for Common Infra (GKE + GCS)| Developers can deploy a stack on GCP for cloud agnostic components|
-`Unified Observability` | Anomaly Detection| Developers can get metric anomaly reports on interested /important metrics|
+`Unified Observability` | Anomaly Detection| Developers can get metric anomaly reports on interested/important metrics|
 
 **OND 2021**
 
@@ -50,5 +50,5 @@ Epic | Roadmap | Jobs To Be Done (JTBD) |
 `Infosec Enablement` | Unified Inventory View| Infosec teams can pull inventory of all cloud resources at one place|
 `Core`| Application and Resource View| Developers can get details view and history of each resource| 
 `Extensibility` | Central Control Plane Events store| Devops teams can hook in to Facets CP events and build custom workflows| 
-`Features` | Data platforms support| Developers can deploy big data pipelines like Spark| 
+`Features` | Data platforms support| Developers can deploy big data pipelines over languages like Spark| 
 `Customer Requests`| GPU Support| Developers can use GPUs for suitable workloads like ML/Video processing|

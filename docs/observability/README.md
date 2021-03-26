@@ -23,14 +23,19 @@ shows a pre-built redis dashboard.
 
 ### Application Metrics
 
+Facets.cloud adopts [Open Telemetry](https://opentelemetry.io/) standards for pushing metrics. Applications expose metrics as end-points and declare it as a 
+monitoring object inside the FSDL application specifications. Facets.cloud instruments the instrumentation of scraping the metrics out of the application metrics end-points and submits to prometheus. 
 
 
+
+### Metrics Integrations
+
+You can use your favourite third-party tools like Newrelic to visualize the metrics apart
+from the Grafana dashboard. The Newrelic pre-integration can relay metrics from prometheus to Newrelic without any other code change
+to the application. 
 
 ## Logs
 
-
-
-## Security Information and Event Management (SIEM)
 
 
 
