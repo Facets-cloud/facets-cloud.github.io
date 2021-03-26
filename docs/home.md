@@ -1,4 +1,4 @@
-# Facets 
+# Getting Started 
 
 Facets.cloud simplifies the creation, deployment and day-to-day operations of a product over multiple deployments across multiple clouds. 
 Any cloud deployment managed by Facets ships with best-practice observability, security, disaster recovery  and compliance suits powered by opensource and commercial tools.
@@ -8,7 +8,7 @@ A deployment is a complete manifestation of the following underlying components
 * Databases (Schema, password management)
 
 The wiki is organized in the following sections
-## Getting Started
+## A quick walkthrough
 
 * [A sample deployment](getting_started/demo.md)
 * [Prerequisites - Onboarding Applications to facets](getting_started/prerequisites.md)
