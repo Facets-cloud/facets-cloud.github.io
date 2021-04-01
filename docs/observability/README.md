@@ -25,6 +25,10 @@ graphs shows a pre-built redis dashboard.
 Facets.cloud adopts [Open Telemetry](https://opentelemetry.io/) standards for pushing metrics. Applications expose metrics as end-points and declare it as a
 monitoring object inside the FSDL application specifications. Facets.cloud instruments the scraping of these metrics out of the application metrics end-points and submits to Prometheus.
 
+### User Defined Dashboards
+
+Dashboards can also be defined in Facet stack definition language by committing the exported json from grafana into the stack definition
+>place the json file in **/dashboards/instances** directory in your stack
 
 ### Metrics Integrations with third party tools
 
@@ -69,6 +73,11 @@ The set of alerts can be categorized in to two parts
 1. Standard Alerts - Facets ships standard alerts with each component that is defined in the stack. 
 2. User defined Alerts - Additionally, alerts can be defined in [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/) and committed in
 the stack git repo, which will be automatically available in all deployments
+
+   These Alerts can be defined in Facet stack definition language by committing the **alertmanager yaml** into the stack definition
+>place the yaml file in **/alerts/instances** directory in your stack
+
+Sample Yaml File:
    ````
     - name: mongo.rules
       rules:
@@ -85,5 +94,6 @@ the stack git repo, which will be automatically available in all deployments
    ````
    The alerts can be pushed to ChatOPs tools like Slack or flock. Any team that has added the corresponding module as an observer,  
 receives the alert for that module by the channel updates.
-   ![Flock Alert](../media/flock.png)
+
+![Flock Alert](../media/flock.png)
    
