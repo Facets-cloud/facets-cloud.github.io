@@ -231,21 +231,6 @@
                             "userName",
                             "password"
                           ]
-                        },
-                        {
-                          "type": "object",
-                          "properties": {
-                            "userName": {
-                              "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
-                            }
-                          },
-                          "required": [
-                            "userName",
-                            "password"
-                          ]
                         }
                       ]
                     }
@@ -277,21 +262,6 @@
                     "environmentVariables": {
                       "type": "array",
                       "items": [
-                        {
-                          "type": "object",
-                          "properties": {
-                            "userName": {
-                              "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
-                            }
-                          },
-                          "required": [
-                            "userName",
-                            "password"
-                          ]
-                        },
                         {
                           "type": "object",
                           "properties": {
