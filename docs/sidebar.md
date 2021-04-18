@@ -1,4 +1,4 @@
-* [Getting Started](home.md)
+* [Home](home.md)
 * [Day 1 Operations](operate/README.md)
   * [Defining your product](fsdl/README.md)
   * [Deploying your cluster](deploy/README.md)
