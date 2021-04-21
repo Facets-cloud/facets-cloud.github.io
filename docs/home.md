@@ -42,7 +42,13 @@ Facets.cloud is an independent entity that is incubated under [Capillary Technol
 
 ![Facets Case_Study_.png](media/Case_Study_.png)
 
-# **Getting Started**
+# **Key Terminologies**
+>**Stack** - Stack is a blueprint that defines the components of a Product (Microservices, infrastructure) and relationships between them.
+ 
+>**Cluster** - Cluster is the physical manifestation of the stack in a cloud like AWS. One stack can have many clusters like QA, Pre prod, Production 1, Production 2 etc.
+
+>**Control Plane** - Control plane is a UI for defining deploying and managing stacks and clusters. This UI is private to each customer and can be used to deploy multiple stacks and clusters.
+
+# **Watch Facets in Action**
 
 * [A sample deployment](getting_started/demo.md)
-* [Prerequisites - Onboarding Applications to facets](getting_started/prerequisites.md)
