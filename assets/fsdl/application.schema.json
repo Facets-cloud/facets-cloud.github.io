@@ -30,8 +30,9 @@
     },
     "secretFileMounts": {
       "type": "array",
+      "title": "secretFileMounts",
       "description": "Key Values to be injected as a secret.",
-      "items": {}
+      "items": {"type": "string"}
     },
     "protocolGroup": {
       "type": "string",
@@ -43,6 +44,7 @@
     },
     "scaling": {
       "type": "object",
+      "title": "scaling",
       "description": "This Section allows you to configure autoscaling features of your application",
       "properties": {
         "hpaEnabled": {
@@ -71,6 +73,7 @@
     },
     "liveness": {
       "type": "object",
+      "title": "liveness",
       "description": "This section is to decribe the liveness probe for an application. Liveness probes are used to know when to restart a container. For example, liveness probes could catch a deadlock, where an application is running, but unable to make progress. Restarting a container in such a state can help to make the application more available despite bugs.",
       "properties": {
         "enableLivenessHTTP": {
@@ -109,6 +112,7 @@
     },
     "readiness": {
       "type": "object",
+      "title": "readiness",
       "description": "This section is to describe the readiness probe for an application. The kubelet uses readiness probes to know when a container is ready to start accepting traffic. A Pod is considered ready when all of its containers are ready. One use of this signal is to control which Pods are used as backends for Services. When a Pod is not ready, it is removed from Service load balancers.",
 
       "properties": {
@@ -148,11 +152,13 @@
     },
     "ports": {
       "type": "array",
+      "title": "ports",
       "description": "All the ports the application interacts on",
 
       "items": [
         {
           "type": "object",
+          "title": "items",
           "properties": {
             "name": {
               "type": "string"
@@ -174,6 +180,7 @@
     },
     "build": {
       "type": "object",
+      "title": "build",
       "description": "This section describes how to fetch build for this application",
       "properties": {
         "ci": {
@@ -192,16 +199,20 @@
     },
     "credentialRequests": {
       "type": "object",
+      "title": "credentialRequests",
       "description": "This section is to lineup all access request for this application to all databases and cloud resources ",
       "properties": {
         "dbs": {
           "type": "object",
+          "title": "dbs",
           "properties": {
             "mysql": {
               "type": "array",
+              "title": "mysql",
               "items": [
                 {
                   "type": "object",
+                  "title": "mysqlElement",
                   "properties": {
                     "resourceType": {
                       "type": "string"
@@ -214,9 +225,11 @@
                     },
                     "environmentVariables": {
                       "type": "array",
+                      "title": "environmentVariables",
                       "items": [
                         {
                           "type": "object",
+                          "title": "environmentVariableElement",
                           "properties": {
                             "userName": {
                               "type": "string"
@@ -244,9 +257,11 @@
             },
             "mongo": {
               "type": "array",
+              "title": "mongo",
               "items": [
                 {
                   "type": "object",
+                  "title": "mongoElement",
                   "properties": {
                     "resourceType": {
                       "type": "string"
@@ -259,9 +274,11 @@
                     },
                     "environmentVariables": {
                       "type": "array",
+                      "title": "environmentVariables",
                       "items": [
                         {
                           "type": "object",
+                          "title": "environmentVariableElement",
                           "properties": {
                             "userName": {
                               "type": "string"
@@ -295,12 +312,15 @@
         },
         "queues": {
           "type": "object",
+          "title": "queues",
           "properties": {
             "rabbitmq": {
               "type": "array",
+              "title": "rabbitmq",
               "items": [
                 {
                   "type": "object",
+                  "title": "rabbitmqElement",
                   "properties": {
                     "resourceType": {
                       "type": "string"
@@ -313,9 +333,11 @@
                     },
                     "environmentVariables": {
                       "type": "array",
+                      "title": "environmentVariables",
                       "items": [
                         {
                           "type": "object",
+                          "title": "environmentVariableElement",
                           "properties": {
                             "userName": {
                               "type": "string"
@@ -348,9 +370,11 @@
         },
         "cloud": {
           "type": "array",
+          "title": "cloud",
           "items": [
             {
               "type": "object",
+              "title": "cloudElement",
               "properties": {
                 "resourceType": {
                   "type": "string"
@@ -379,11 +403,13 @@
     },
     "environmentVariables": {
       "type": "object",
+      "title": "environmentVariables",
       "description": "This section is to define all the environment variables to be used in application runtime",
 
       "properties": {
         "static": {
           "type": "object",
+          "title": "static",
           "description": "Define all static environment variables for this application here as key value pairs. These are typically tuning parameters for your applications that can be changed from environment to environment",
           "properties": {
 
@@ -393,9 +419,13 @@
         },
         "dynamic": {
           "type": "object",
+          "title": "dynamic",
           "properties": {
+            "type": "object",
+            "title": "dynamicElement",
             "INTOUCH_ENDPOINT": {
               "type": "object",
+              "title": "Service Endpoint",
               "properties": {
                 "resourceType": {
                   "type": "string"
@@ -425,17 +455,20 @@
     },
     "k8s_service_names": {
       "type": "array",
+      "title": "k8s_service_names",
       "description": "The service name to be used in kubernetes with which application may be discovered, default is <filename(without extension)>.default",
       "items": [
       ]
     },
     "ingress_rules": {
       "type": "array",
+      "title": "ingress_rules",
       "description": "This section is to map applications with public facing lbs by specifying their path/ subdomain based router configurations",
 
       "items": [
         {
           "type": "object",
+          "title": "ingress_rule_Element",
           "properties": {
             "ingress": {
               "type": "string",
