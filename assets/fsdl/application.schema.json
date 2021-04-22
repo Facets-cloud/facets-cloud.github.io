@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://facets.cloud/application.schema.json",
+  "$id": "https://facets.cloud/assets/fsdl/application.schema.json",
   "title": "Application",
   "description": "Facets Stack Definition for Applications",
   "type": "object",
