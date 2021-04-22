@@ -1,3 +1,0 @@
-# Application
-
-## Heading 1 

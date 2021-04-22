@@ -16,7 +16,7 @@ The wiki is organized in the following sections
 
 ## Onboarding your product on Facets 
 
-### [1\. Declare - Define a product in Facets Stack Definition Language](fsdl/README.MD)
+### [1\. Declare - Define a product in Facets Stack Definition Language](../fsdl/README.MD)
 
 Facets stack definition language enables you to define your complete product as a stack.
 A stack is a easy to write JSON that is committed as a git repository. Typical contents of a stack is
