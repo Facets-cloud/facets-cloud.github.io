@@ -422,8 +422,7 @@
           "title": "dynamic",
           "properties": {
             "type": "object",
-            "title": "dynamicElement",
-            "INTOUCH_ENDPOINT": {
+            "SERVICE_ENDPOINT": {
               "type": "object",
               "title": "Service Endpoint",
               "properties": {

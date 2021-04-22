@@ -8,7 +8,7 @@
 
 ### Objects
 
-*   [Service Endpoint](./application-properties-environmentvariables-properties-dynamic-dynamicelement-service-endpoint.md) – `https://facets.cloud/assets/fsdl/application.schema.json#/properties/environmentVariables/properties/dynamic/properties/INTOUCH_ENDPOINT`
+*   [Service Endpoint](./application-properties-environmentvariables-properties-dynamic-properties-service-endpoint.md) – `https://facets.cloud/assets/fsdl/application.schema.json#/properties/environmentVariables/properties/dynamic/properties/SERVICE_ENDPOINT`
 
 *   [build](./application-properties-build.md "This section describes how to fetch build for this application") – `https://facets.cloud/assets/fsdl/application.schema.json#/properties/build`
 
