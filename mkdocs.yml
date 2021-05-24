@@ -1,0 +1,17 @@
+site_name: Facets Documentation
+theme: readthedocs
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Prerequisites: 'getting_started/prerequisites.md'
+      - Demo: 'getting_started/demo.md'
+  - Operate your Cluster:
+      - Observability: 'tools/observability.md'
+      - Compliance & Security: 'tools/compliance.md'
+  - Roadmap:
+      - 'roadmap/roadmap.md'
+      - 'roadmap/request.md'
+
+
+markdown_extensions:
+  - fenced_code
