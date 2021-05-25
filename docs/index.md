@@ -2,7 +2,7 @@
 
 [Facets.cloud](https://www.facets.cloud/) is a cloud automation platform for Developers and DevSecOps. Facets.cloud simplifies provisioning and change management of applications, infrastructure components and databases on multiple cloud platforms.
 
-# **Salient Features**
+## Salient Features
 
 Any deployment provisioned through Facets.cloud automatically gets continuous deployments, observability, Security practices and disaster recovery features.
 
@@ -28,7 +28,7 @@ Facets.cloud components are developed with observability first approach. Infrast
 
 Deployments receive best practice point-to-site connectivity for developers and devops with role based access control. Networks, Security, SSL certificates are auto provisioned and managed by Facets. Antivirus, OSSEC tools come built-in with pre-built dashboards for monitoring and compliance. Facets.cloud ensures all critical components like Databases are backed by a disaster recovery solution.
 
-# **How is Facets.cloud built?**
+## How is Facets.cloud built?
 
 Facets.cloud is built on open standards like Kubernetes, Open Telemetry. It leverages the best of the offerings of the cloud providers by being cloud native and at the same time supports multiple cloud platforms and local development environments.
 
@@ -36,19 +36,19 @@ Facets.cloud is built on open standards like Kubernetes, Open Telemetry. It leve
 
 Please find a demonstration of a sample application deployment [here](https://www.facets.cloud/docs/#/getting_started/demo).
 
-# **About the Company**
+## About the Company
 
 Facets.cloud is an independent entity that is incubated under [Capillary Technologies](https://www.capillarytech.com/), a leading SaaS product in the customer engagement sector. Currently, it manages applications hosted on several thousands of nodes provisioned on AWS public cloud. Facets.cloud has helped in reducing 15% of production issues emerging from automation gaps.
 
 ![Facets Case_Study_.png](media/Case_Study_.png)
 
-# **Key Terminologies**
+## Key Terminologies
 >**Stack** - Stack is a blueprint that defines the components of a Product (Microservices, infrastructure) and relationships between them.
  
 >**Cluster** - Cluster is the physical manifestation of the stack in a cloud like AWS. One stack can have many clusters like QA, Pre prod, Production 1, Production 2 etc.
 
 >**Control Plane** - Control plane is a UI for defining deploying and managing stacks and clusters. This UI is private to each customer and can be used to deploy multiple stacks and clusters.
 
-# **Watch Facets in Action**
+## Watch Facets in Action
 
 * [A sample deployment](getting_started/demo.md)

@@ -1,5 +1,5 @@
 site_name: Facets Documentation
-theme: readthedocs
+theme: material
 nav:
   - Home: index.md
   - Getting Started:
