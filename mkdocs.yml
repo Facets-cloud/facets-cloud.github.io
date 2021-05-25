@@ -1,5 +1,6 @@
 site_name: Facets Documentation
 site_dir: documentation
+docs_dir: markdown
 google_analytics:
   - UA-194596364-1
   - auto
