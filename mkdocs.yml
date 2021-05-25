@@ -1,4 +1,5 @@
 site_name: Facets Documentation
+site_url: https://www.facets.cloud/documentation
 site_dir: documentation
 docs_dir: markdown
 google_analytics:
