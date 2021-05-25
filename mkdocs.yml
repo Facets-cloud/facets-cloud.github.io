@@ -8,7 +8,6 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
-    - navigation.sections
   palette:
     primary: 005EA6
 nav:
