@@ -1,6 +1,6 @@
 # Roadmap
 
-**AMJ 2021**
+##AMJ 2021
 
 Epic | Roadmap | Jobs To Be Done (JTBD) |
 -------|-------------------| ----------
@@ -14,7 +14,7 @@ Epic | Roadmap | Jobs To Be Done (JTBD) |
 `Multi-Cloud`| Azure Support for Common Infra ([AKS](https://azure.microsoft.com/en-in/services/kubernetes-service/) + [Blob](https://azure.microsoft.com/en-in/services/storage/blobs/)| Developers can deploy a stack on Azure for cloud agnostic components|
 
 
-**JAS 2021**
+##JAS 2021
 
 Epic | Roadmap | Jobs To Be Done (JTBD) |
 -------|-------------------| ----------
@@ -28,7 +28,7 @@ Epic | Roadmap | Jobs To Be Done (JTBD) |
 `Multi-Cloud`| GCP Support for Common Infra ([GKE](https://cloud.google.com/kubernetes-engine) + [GCS](https://cloud.google.com/storage))| Developers can deploy a stack on GCP for cloud agnostic components|
 `Unified Observability` | Anomaly Detection| Developers can get metric anomaly reports on interested/important metrics|
 
-**OND 2021**
+##OND 2021
 
 Epic | Roadmap | Jobs To Be Done (JTBD) |
 -------|-------------------| ----------
@@ -40,7 +40,7 @@ Epic | Roadmap | Jobs To Be Done (JTBD) |
 `Core`|Post Deployment Hooks for QA (GA)|QA teams can control deployment progress in a CD pipeline|
 `Unified Observability` | Cross Deployment Observability| Developers and Devops can compare cross deployment metrics (standard and custom)|
 
-**JFM 2022**
+##JFM 2022
 
 Epic | Roadmap | Jobs To Be Done (JTBD) |
 -------|-------------------| ----------
