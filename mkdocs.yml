@@ -1,5 +1,16 @@
 site_name: Facets Documentation
-theme: material
+extra_css:
+  - stylesheets/extra.css
+theme:
+  name: material
+  logo: media/fav.png
+  favicon: media/fav.png
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+  palette:
+    primary: 005EA6
 nav:
   - Home: index.md
   - Getting Started:
