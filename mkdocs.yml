@@ -1,4 +1,7 @@
 site_name: Facets Documentation
+google_analytics:
+  - UA-194596364-1
+  - auto
 extra_css:
   - stylesheets/extra.css
 theme:
