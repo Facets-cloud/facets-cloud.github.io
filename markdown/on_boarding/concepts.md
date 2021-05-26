@@ -24,3 +24,7 @@ houses the defined Kubernetes resources and dedicated cloud resource instances d
 ## Control Plane
 
 Control plane is the web UI to create, manage and operate stacks and clusters.
+
+## Product Overview
+
+![overview](../media/overview.png)
