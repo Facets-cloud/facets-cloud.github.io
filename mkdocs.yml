@@ -17,10 +17,14 @@ theme:
   palette:
     primary: 005EA6
 nav:
-  - Home: index.md
+  - Introduction: 'index.md'
   - Getting Started:
       - Prerequisites: 'getting_started/prerequisites.md'
-      - Demo: 'getting_started/demo.md'
+      - Concepts: 'on_boarding/concepts.md'
+      - Get your Control Plane: 'on_boarding/control_plane.md'
+      - Create a Stack: 'on_boarding/create_stack.md'
+      - Create a Cluster: 'on_boarding/create_cluster.md'
+      - Video Tutorial: 'getting_started/demo.md'
   - Operate your Cluster:
       - Observability: 'tools/observability.md'
       - Compliance & Security: 'tools/compliance.md'
