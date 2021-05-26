@@ -34,4 +34,4 @@ nav:
 
 
 markdown_extensions:
-  - fenced_code
+  - pymdownx.superfences
