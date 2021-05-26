@@ -698,18 +698,19 @@ the stack git repo, which will be automatically available in all deployments</p>
 <p>place the yaml file in <strong>/alerts/instances</strong> directory in your stack</p>
 </blockquote>
 <p>Sample Yaml File:
-   <code>- name: mongo.rules
-      rules:
-    - alert: MongoRelicaStatusSecondaryCrit
-      expr: mongodb_mongod_replset_member_state{state="SECONDARY"} != 2
-      for: 2m
-      labels:
-      severity: critical
-      team: infra
-      resourceType: mongo
-      resourceName: "{{ $labels.pod_name }}"
-      annotations:
-      message: MongoDB secondary replica status down</code>
+   <div class="highlight"><pre><span></span><code> - name: mongo.rules
+   rules:
+ - alert: MongoRelicaStatusSecondaryCrit
+   expr: mongodb_mongod_replset_member_state{state=&quot;SECONDARY&quot;} != 2
+   for: 2m
+   labels:
+   severity: critical
+   team: infra
+   resourceType: mongo
+   resourceName: &quot;{{ $labels.pod_name }}&quot;
+   annotations:
+   message: MongoDB secondary replica status down
+</code></pre></div>
    The alerts can be pushed to ChatOPs tools like Slack or flock. Any team that has added the corresponding module as an observer,<br />
 receives the alert for that module by the channel updates.</p>
 <p><img alt="Flock Alert" src="../../media/flock.png" /></p>

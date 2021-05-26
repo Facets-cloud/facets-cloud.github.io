@@ -818,143 +818,143 @@
 <h2 id="git-repository">Git Repository</h2>
 <p>Create a Github/Bitbucket git repository. To get started, a stack.json file would qualify the repository as a valid
 stack.</p>
-<pre><code class="language-json">{
-  &quot;clusterVariablesMeta&quot;: {
-  },
-  &quot;stackVariables&quot;: {
-  }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;clusterVariablesMeta&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;stackVariables&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="register-stack-on-control-plane">Register Stack on Control Plane</h2>
 <p>Navigate to Create Stack button on the Control Plane and fill in the details.</p>
 <p><img alt="Register Stack" src="../../media/register_stack.png" /></p>
 <h2 id="creating-an-application-definition">Creating an Application Definition</h2>
 <p>An application may be defined by placing a json file in application/instances directory in stack.</p>
-<pre><code class="language-json">{
-  &quot;size&quot;: &quot;SMALL&quot;,
-  &quot;deploymentStrategy&quot;: &quot;RollingUpdate&quot;,
-  &quot;elbIdleTimeoutSeconds&quot;: 300,
-  &quot;protocolGroup&quot;: &quot;tcp&quot;,
-  &quot;scaling&quot;: {
-    &quot;hpaEnabled&quot;: true,
-    &quot;hpaMinReplicas&quot;: 1,
-    &quot;hpaMaxReplicas&quot;: 1,
-    &quot;hpaMetricThreshold&quot;: 60
-  },
-  &quot;liveness&quot;: {
-    &quot;enableLivenessTCP&quot;: true,
-    &quot;livenessPort&quot;: 8080,
-    &quot;livenessInitialDelay&quot;: 60,
-    &quot;livenessTimeout&quot;: 10,
-    &quot;livenessFailureThreshold&quot;: 20,
-    &quot;livenessPeriod&quot;: 60,
-    &quot;livenessSuccessThreshold&quot;: 1
-  },
-  &quot;readiness&quot;: {
-    &quot;enableReadinessTCP&quot;: true,
-    &quot;readinessInitialDelay&quot;: 30,
-    &quot;readinessFailureThreshold&quot;: 8,
-    &quot;readinessSuccessThreshold&quot;: 1,
-    &quot;readinessPort&quot;: 8080,
-    &quot;readinessTimeout&quot;: 10,
-    &quot;readinessPeriod&quot;: 60
-  },
-  &quot;ports&quot;: [
-    {
-      &quot;name&quot;: &quot;http&quot;,
-      &quot;containerPort&quot;: 8080,
-      &quot;lbPort&quot;: 80
-    }
-  ],
-  &quot;build&quot;: {
-    &quot;ci&quot;: &quot;deployer&quot;,
-    &quot;id&quot;: &quot;5e301d0aa4a81300073aba10&quot;
-  },
-  &quot;credentialRequests&quot;: {
-    &quot;dbs&quot;: {
-      &quot;mysql&quot;: [
-        {
-          &quot;resourceType&quot;: &quot;mysql&quot;,
-          &quot;resourceName&quot;: &quot;billdump&quot;,
-          &quot;permission&quot;: &quot;READ_WRITE&quot;,
-          &quot;environmentVariables&quot;: [
-            {
-              &quot;userName&quot;: &quot;INTOUCH_DB_MYSQL_FILESERVICE_USERNAME&quot;,
-              &quot;password&quot;: &quot;INTOUCH_DB_MYSQL_FILESERVICE_PASSWORD&quot;
-            }
-          ]
-        }
-      ],
-      &quot;mongo&quot;: []
-    },
-    &quot;queues&quot;: {
-      &quot;rabbitmq&quot;: []
-    },
-    &quot;cloud&quot;: [
-      {
-        &quot;resourceType&quot;: &quot;s3&quot;,
-        &quot;resourceName&quot;: &quot;fileservice&quot;,
-        &quot;permission&quot;: &quot;READ_WRITE&quot;
-      },
-      {
-        &quot;resourceType&quot;: &quot;s3&quot;,
-        &quot;resourceName&quot;: &quot;reon-etl-data&quot;,
-        &quot;permission&quot;: &quot;READ_WRITE&quot;
-      },
-      {
-        &quot;resourceType&quot;: &quot;s3&quot;,
-        &quot;resourceName&quot;: &quot;campaigns&quot;,
-        &quot;permission&quot;: &quot;READ_WRITE&quot;
-      },
-      {
-        &quot;resourceType&quot;: &quot;s3&quot;,
-        &quot;resourceName&quot;: &quot;sharingan&quot;,
-        &quot;permission&quot;: &quot;READ_WRITE&quot;
-      },
-      {
-        &quot;resourceType&quot;: &quot;s3&quot;,
-        &quot;resourceName&quot;: &quot;nsadmindata&quot;,
-        &quot;permission&quot;: &quot;READ_WRITE&quot;
-      }
-    ]
-  },
-  &quot;environmentVariables&quot;: {
-    &quot;static&quot;: {
-      &quot;XMX_VALUE&quot;: &quot;1573m&quot;,
-      &quot;XMS_VALUE&quot;: &quot;1573m&quot;
-    },
-    &quot;dynamic&quot;: {
-      &quot;FILESERVICE_BUCKET&quot;: {
-        &quot;resourceType&quot;: &quot;s3&quot;,
-        &quot;resourceName&quot;: &quot;fileservice&quot;,
-        &quot;attribute&quot;: &quot;bucket_name&quot;
-      },
-      &quot;CAMPAIGNS_FILESERVICE_BUCKET_NAME&quot;: {
-        &quot;resourceType&quot;: &quot;s3&quot;,
-        &quot;resourceName&quot;: &quot;campaigns&quot;,
-        &quot;attribute&quot;: &quot;bucket_name&quot;
-      },
-      &quot;NSADMINDATA_FILESERVICE_BUCKET_NAME&quot;: {
-        &quot;resourceType&quot;: &quot;s3&quot;,
-        &quot;resourceName&quot;: &quot;nsadmindata&quot;,
-        &quot;attribute&quot;: &quot;bucket_name&quot;
-      }
-    }
-  },
-  &quot;k8s_service_names&quot;: [
-    &quot;fileservice&quot;
-  ],
-  &quot;ingress_rules&quot;: [
-    {
-      &quot;ingress&quot;: &quot;demoingress&quot;,
-      &quot;path&quot;: &quot;/&quot;,
-      &quot;targetPort&quot;: 3000,
-      &quot;domainPrefix&quot;: &quot;fileservice.&quot;
-    }
-  ],
-  &quot;resourceAllocationStrategy&quot;: &quot;GENERAL_PURPOSE&quot;
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;SMALL&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;deploymentStrategy&quot;</span><span class="p">:</span> <span class="s2">&quot;RollingUpdate&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;elbIdleTimeoutSeconds&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+  <span class="nt">&quot;protocolGroup&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;scaling&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;hpaEnabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;hpaMinReplicas&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;hpaMaxReplicas&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;hpaMetricThreshold&quot;</span><span class="p">:</span> <span class="mi">60</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;liveness&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;enableLivenessTCP&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;livenessPort&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+    <span class="nt">&quot;livenessInitialDelay&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="nt">&quot;livenessTimeout&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="nt">&quot;livenessFailureThreshold&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="nt">&quot;livenessPeriod&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="nt">&quot;livenessSuccessThreshold&quot;</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;readiness&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;enableReadinessTCP&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;readinessInitialDelay&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="nt">&quot;readinessFailureThreshold&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="nt">&quot;readinessSuccessThreshold&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;readinessPort&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+    <span class="nt">&quot;readinessTimeout&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="nt">&quot;readinessPeriod&quot;</span><span class="p">:</span> <span class="mi">60</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;containerPort&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+      <span class="nt">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">80</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;ci&quot;</span><span class="p">:</span> <span class="s2">&quot;deployer&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5e301d0aa4a81300073aba10&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;credentialRequests&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;dbs&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;mysql&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;mysql&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;resourceName&quot;</span><span class="p">:</span> <span class="s2">&quot;billdump&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="s2">&quot;READ_WRITE&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;environmentVariables&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;userName&quot;</span><span class="p">:</span> <span class="s2">&quot;INTOUCH_DB_MYSQL_FILESERVICE_USERNAME&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;INTOUCH_DB_MYSQL_FILESERVICE_PASSWORD&quot;</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;mongo&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;queues&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;rabbitmq&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;cloud&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;s3&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;resourceName&quot;</span><span class="p">:</span> <span class="s2">&quot;fileservice&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="s2">&quot;READ_WRITE&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;s3&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;resourceName&quot;</span><span class="p">:</span> <span class="s2">&quot;reon-etl-data&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="s2">&quot;READ_WRITE&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;s3&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;resourceName&quot;</span><span class="p">:</span> <span class="s2">&quot;campaigns&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="s2">&quot;READ_WRITE&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;s3&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;resourceName&quot;</span><span class="p">:</span> <span class="s2">&quot;sharingan&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="s2">&quot;READ_WRITE&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;s3&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;resourceName&quot;</span><span class="p">:</span> <span class="s2">&quot;nsadmindata&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="s2">&quot;READ_WRITE&quot;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;environmentVariables&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;static&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;XMX_VALUE&quot;</span><span class="p">:</span> <span class="s2">&quot;1573m&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;XMS_VALUE&quot;</span><span class="p">:</span> <span class="s2">&quot;1573m&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;dynamic&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;FILESERVICE_BUCKET&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;s3&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;resourceName&quot;</span><span class="p">:</span> <span class="s2">&quot;fileservice&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;attribute&quot;</span><span class="p">:</span> <span class="s2">&quot;bucket_name&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;CAMPAIGNS_FILESERVICE_BUCKET_NAME&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;s3&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;resourceName&quot;</span><span class="p">:</span> <span class="s2">&quot;campaigns&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;attribute&quot;</span><span class="p">:</span> <span class="s2">&quot;bucket_name&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;NSADMINDATA_FILESERVICE_BUCKET_NAME&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;s3&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;resourceName&quot;</span><span class="p">:</span> <span class="s2">&quot;nsadmindata&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;attribute&quot;</span><span class="p">:</span> <span class="s2">&quot;bucket_name&quot;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;k8s_service_names&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;fileservice&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;ingress_rules&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;ingress&quot;</span><span class="p">:</span> <span class="s2">&quot;demoingress&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;targetPort&quot;</span><span class="p">:</span> <span class="mi">3000</span><span class="p">,</span>
+      <span class="nt">&quot;domainPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;fileservice.&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;resourceAllocationStrategy&quot;</span><span class="p">:</span> <span class="s2">&quot;GENERAL_PURPOSE&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="size">Size</h3>
 <p>Pod sizing to use as define in sizing json. ResourceAllocationStrategy drives which sizing family to use.</p>
 <h3 id="deployment-strategy">Deployment Strategy</h3>
@@ -995,33 +995,33 @@ CPU_INTENSIVE, GENERAL_PURPOSE etc. The files have to be named:</p>
 <p>application/sizing.{SIZING_FAMILY}.json</p>
 <p>Example:</p>
 <p>application/sizing.CPU_INTENSIVE.json</p>
-<pre><code class="language-json">{
-  &quot;SMALL&quot;: {
-    &quot;podCPULimit&quot;: 1,
-    &quot;podMemoryLimit&quot;: 2
-  },
-  &quot;LARGE&quot;: {
-    &quot;podCPULimit&quot;: 2,
-    &quot;podMemoryLimit&quot;: 4
-  },
-  &quot;XLARGE&quot;: {
-    &quot;podCPULimit&quot;: 3,
-    &quot;podMemoryLimit&quot;: 6
-  },
-  &quot;XXLARGE&quot;: {
-    &quot;podCPULimit&quot;: 6,
-    &quot;podMemoryLimit&quot;: 10
-  },
-  &quot;TINY&quot;: {
-    &quot;podCPULimit&quot;: 0.5,
-    &quot;podMemoryLimit&quot;: 1
-  },
-  &quot;MICRO&quot;: {
-    &quot;podCPULimit&quot;: 0.25,
-    &quot;podMemoryLimit&quot;: 0.5
-  }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;SMALL&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;podCPULimit&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;podMemoryLimit&quot;</span><span class="p">:</span> <span class="mi">2</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;LARGE&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;podCPULimit&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;podMemoryLimit&quot;</span><span class="p">:</span> <span class="mi">4</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;XLARGE&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;podCPULimit&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="nt">&quot;podMemoryLimit&quot;</span><span class="p">:</span> <span class="mi">6</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;XXLARGE&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;podCPULimit&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="nt">&quot;podMemoryLimit&quot;</span><span class="p">:</span> <span class="mi">10</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;TINY&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;podCPULimit&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="nt">&quot;podMemoryLimit&quot;</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;MICRO&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;podCPULimit&quot;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span>
+    <span class="nt">&quot;podMemoryLimit&quot;</span><span class="p">:</span> <span class="mf">0.5</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="common-environment-variables">Common Environment Variables</h2>
 <h3 id="stack-variables">Stack Variables</h3>
 <p>Any fixed environment variables that need to be injected into all applications maybe defined using stackVariables field
@@ -1029,62 +1029,62 @@ in stack.json</p>
 <h3 id="cluster-variables">Cluster Variables</h3>
 <p>Any variables that need to be define per cluster maybe declared using clusterVariablesMeta field in stack.json</p>
 <p>Example:</p>
-<pre><code class="language-json">{
-  &quot;clusterVariablesMeta&quot;: {
-    &quot;NEWRELIC_KEY&quot;: {
-      &quot;value&quot;: &quot;default&quot;
-    },
-    &quot;NEWRELIC_LICENSE_KEY&quot;: {
-      &quot;value&quot;: &quot;default&quot;
-    },
-    &quot;NEW_RELIC_LICENSE_KEY&quot;: {
-      &quot;value&quot;: &quot;default&quot;
-    },
-    &quot;NEWRELIC_INSERT_KEY&quot;: {
-      &quot;secret&quot;: true,
-      &quot;value&quot;: &quot;default&quot;
-    }
-  }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;clusterVariablesMeta&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;NEWRELIC_KEY&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;NEWRELIC_LICENSE_KEY&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;NEW_RELIC_LICENSE_KEY&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;NEWRELIC_INSERT_KEY&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;secret&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>The variables can be set at cluster creation or from the overview page. These variables are injected as environment
 variables to all application pods.</p>
 <h2 id="ingress-definitions">Ingress definitions</h2>
 <p>An ingress may be define by creating a definition in ingress/instances/ directory. Example:</p>
 <h3 id="internal">Internal</h3>
 <p>ingress/instances/demointernal.json</p>
-<pre><code class="language-json">{
-  &quot;base_domain&quot; : &quot;demo.internal&quot;,
-  &quot;subdomains&quot; : [],
-  &quot;default_ingress&quot;: false,
-  &quot;basic_auth_enabled&quot;: false,
-  &quot;ingress_rules&quot; : [],
-  &quot;internal&quot;: true
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;base_domain&quot;</span> <span class="p">:</span> <span class="s2">&quot;demo.internal&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;subdomains&quot;</span> <span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&quot;default_ingress&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;basic_auth_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;ingress_rules&quot;</span> <span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&quot;internal&quot;</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>Applications may add ingress rules by adding ingress_rules in their definitions.</p>
 <p>Eg:</p>
-<pre><code class="language-json">&quot;ingress_rules&quot;: [
-    {
-      &quot;ingress&quot;: &quot;demointernal&quot;,
-      &quot;path&quot;: &quot;/&quot;,
-      &quot;targetPort&quot;: 3000,
-      &quot;domainPrefix&quot;: &quot;fs.&quot;
-    }
-  ]
-</code></pre>
-<p>This would result in all HTTP traffic to fs.martjack.internal getting directed at the app.</p>
+<p><div class="highlight"><pre><span></span><code><span class="nt">&quot;ingress_rules&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;ingress&quot;</span><span class="p">:</span> <span class="s2">&quot;demointernal&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;targetPort&quot;</span><span class="p">:</span> <span class="mi">3000</span><span class="p">,</span>
+      <span class="nt">&quot;domainPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;fs.&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+</code></pre></div>
+This would result in all HTTP traffic to fs.martjack.internal getting directed at the app.</p>
 <h3 id="external">External</h3>
-<p>ingress/instances/demoexternal.json</p>
-<pre><code class="language-json">{
-  &quot;base_domain&quot; : &quot;demo.facets.cloud&quot;,
-  &quot;subdomains&quot; : [],
-  &quot;default_ingress&quot;: true,
-  &quot;basic_auth_enabled&quot;: false,
-  &quot;ingress_rules&quot; : [],
-  &quot;internal&quot;: false
-}
-</code></pre>
+<p>ingress/instances/demoexternal.json
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;base_domain&quot;</span> <span class="p">:</span> <span class="s2">&quot;demo.facets.cloud&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;subdomains&quot;</span> <span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&quot;default_ingress&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;basic_auth_enabled&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;ingress_rules&quot;</span> <span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&quot;internal&quot;</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div></p>
 <p>As this is not an external ingress, the domain naming convention is {clusterName}.{base_domain}. The above mentioned ingress rule applied to an external ingress would result in a public endpoint:</p>
 <blockquote>
 <p>fs.{clusterName}.demo.facets.cloud</p>
