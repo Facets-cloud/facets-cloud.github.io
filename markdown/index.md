@@ -41,7 +41,7 @@ Facets.cloud is built on open standards like Kubernetes, Open Telemetry. It leve
 
 ## About the Company
 
-Facets.cloud is an independent entity that is incubated under [Capillary Technologies](https://www.capillarytech.com/), a leading SaaS product in the customer engagement sector. Currently, it manages applications hosted on several thousands of nodes provisioned on AWS public cloud. Facets.cloud has helped in reducing 15% of production issues emerging from automation gaps.
+Facets.cloud manages applications hosted on several thousands of nodes provisioned on AWS public cloud. Facets.cloud has helped in reducing 15% of production issues emerging from automation gaps.
 
 ![Facets Case_Study_.png](media/Case_Study_.png)
 

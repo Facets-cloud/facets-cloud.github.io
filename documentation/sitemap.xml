@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://www.facets.cloud/documentation/</loc>
-     <lastmod>2021-05-26</lastmod>
+     <lastmod>2021-05-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.facets.cloud/documentation/getting_started/prerequisites/</loc>
-     <lastmod>2021-05-26</lastmod>
+     <lastmod>2021-05-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.facets.cloud/documentation/on_boarding/concepts/</loc>
-     <lastmod>2021-05-26</lastmod>
+     <lastmod>2021-05-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.facets.cloud/documentation/on_boarding/control_plane/</loc>
-     <lastmod>2021-05-26</lastmod>
+     <lastmod>2021-05-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.facets.cloud/documentation/on_boarding/create_stack/</loc>
-     <lastmod>2021-05-26</lastmod>
+     <lastmod>2021-05-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.facets.cloud/documentation/on_boarding/create_cluster/</loc>
-     <lastmod>2021-05-26</lastmod>
+     <lastmod>2021-05-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.facets.cloud/documentation/getting_started/demo/</loc>
-     <lastmod>2021-05-26</lastmod>
+     <lastmod>2021-05-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.facets.cloud/documentation/tools/observability/</loc>
-     <lastmod>2021-05-26</lastmod>
+     <lastmod>2021-05-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.facets.cloud/documentation/tools/compliance/</loc>
-     <lastmod>2021-05-26</lastmod>
+     <lastmod>2021-05-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.facets.cloud/documentation/roadmap/roadmap/</loc>
-     <lastmod>2021-05-26</lastmod>
+     <lastmod>2021-05-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.facets.cloud/documentation/roadmap/request/</loc>
-     <lastmod>2021-05-26</lastmod>
+     <lastmod>2021-05-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
