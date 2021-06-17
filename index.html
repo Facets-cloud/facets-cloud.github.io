@@ -103,85 +103,162 @@
 <div class="album py-5 bg-light" id="product">
     <div class="container">
 
-        <div class="row row-cols-1 row-cols-lg-3 g-3 pt-3">
-            <div class="col">
-                <div class="card h-100 border-0">
-                    <div class="card-header bg-white py-4 text-center border-0">
-                        <h5 class="fw-bold"><i class="bi-cloud-check-fill me-2"></i>
-                            Collaboration for Cloud Teams</h5>
+        <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active lead" id="collaboration-tab" data-bs-toggle="tab"
+                        data-bs-target="#collaboration" type="button"
+                        role="tab" aria-controls="collaboration" aria-selected="true"><i
+                        class="bi-cloud-check-fill me-2 "></i> Collaboration for Cloud Teams</a></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link lead" id="continuous-tab" data-bs-toggle="tab" data-bs-target="#continuous"
+                        type="button"
+                        role="tab" aria-controls="continuous" aria-selected="false"><i
+                        class="bi-cloud-check-fill me-2"></i>
+                    Continuous
+                    Delivery of Software Product
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link lead" id="comprehensive-tab" data-bs-toggle="tab"
+                        data-bs-target="#comprehensive" type="button"
+                        role="tab" aria-controls="comprehensive" aria-selected="false"><i
+                        class="bi-cloud-check-fill me-2"></i>
+                    Comprehensive Day 2 Operations</a>
+                </button>
+            </li>
+        </ul>
+        <div class="tab-content bg-light" id="myTabContent">
+            <div class="tab-pane fade show active px-5 py-5 " id="collaboration" role="tabpanel"
+                 aria-labelledby="collaboration-tab">
+                <div class="text-center">
+                    <p class="lead"><span class="text-primary">Facets.cloud</span> is changing how teams build and maintain software product
+                        infrastructure.</p>
+                </div>
+                <div class="mb-5 col-lg-8 mx-auto mt-5 text-center">
+                    <h1 class="display-6 ">
+                        Proven cloud management for successful cloud engineering teams </h1>
+                    <p class="lead">With a shared view of infrastructure, configurations, policies, and schema, your
+                        Developers, DevOps, Release, Sustenance, and Infosec teams will deliver frequently and
+                        consistently. </p>
+                </div>
+                <div class="row featurette">
+                    <div class="col-md-8">
+                        <h2 class="fw-light">Familiar Git pull request process</h2>
+                        <p class=""><span class="text-muted lead">Collaboration is easy</span> on Git with complete
+                            control on each change request and a
+                            process that gives flexibility and power to your teams. <span class="text-primary">Facets.cloud</span> modern workflow helps
+                            your team keep pace as well as control.</p>
                     </div>
-                    <div class="card-body">
+                    <div class="col-md-4">
 
-                        <p class="card-text fw-light">Facilitate collaboration between Application Developers, Cloud
-                            operations
-                            Team, NOC Teams, DBAs, Information security teams, Release Teams for your software product
-                            delivery. </p>
-                        <ul class="fw-lighter">
-                            <li class="">Facets.cloud Stack Definition Language (FSDL)</li>
-                            <li class="">Git Based Stack definition and workflow</li>
-                            <li class="">Standard and Custom validations options</li>
-                        </ul>
                     </div>
-                    <!--                    <div class="card-body">-->
-                    <!--                        <a href="#" class="card-link">Learn more</a>-->
-                    <!--                    </div>-->
+                </div>
+                <div class="row featurette">
+                    <div class="col-md-8 order-md-2">
+                        <h2 class="fw-light">Transparent and trackable changes</h2>
+                        <p class=""><span class="text-muted lead">No more surprises.</span> With a clear view of your
+                            complete product, everyone has a real-time, single source of truth view of your entire
+                            software product infrastructure.</p>
+                    </div>
+                    <div class="col-md-4 order-md-1">
+
+                    </div>
                 </div>
             </div>
-            <div class="col ">
-                <div class="card border-0  h-100">
-                    <div class="card-header bg-white py-4 text-center border-0">
-                        <h5 class="fw-bold"><i class="bi-cloud-check-fill me-2"></i>
-                            Continuous Delivery of Software Product</h5>
+            <div class="tab-pane fade  border-1 px-5 py-5 " id="continuous" role="tabpanel"
+                 aria-labelledby="continuous-tab">
+                <div class="text-center">
+                    <p class="lead"><span class="text-primary">Facets.cloud</span> lets you deliver your product to your customers in a seamless and
+                        continuous manner to any cloud provider.</p>
+                </div>
+                <div class="mb-5 col-lg-8 mx-auto mt-5 text-center">
+                    <h1 class="display-6 ">
+                        A unique way to deliver applications, infrastructure, and schema continuously </h1>
+                    <p class="lead">With a unique workflow to deliver a complete software product, You will always have
+                        a consistent and reliable product delivery across all your environments.</p>
+                </div>
+                <div class="row featurette">
+                    <div class="col-md-8">
+                        <h2 class="fw-light">Deploy Complete software product in minutes</h2>
+                        <p class=""><span class="text-muted lead">Launching an environment is easy.</span> With a clear
+                            and complete definition of the product, your team can launch and destroy a new environment
+                            for your cluster in a jiffy.</p>
                     </div>
-                    <div class="card-body">
-                        <p class="card-text fw-light">The FSDL based stack definition can be used to create a completely
-                            working
-                            instance of your software product on any cloud through Facets.cloud Control Plane that is
-                            private to your deployment. Additionally, the control plane enables continuous mutations of
-                            the software product. </p>
+                    <div class="col-md-4">
 
-                        <ul class="fw-lighter">
-                            <li class="">Spin-off and teardown deployments/clusters in minutes</li>
-                            <li class="">Automated scheduled delivery of the entire software product</li>
-                            <li class="">Trigger notifications to QA suites, ChatOps tools and certify the
-                                release automatically/manually
-                            </li>
-                        </ul>
                     </div>
-                    <!--                    <div class="card-body">-->
-                    <!--                        <a href="#" class="card-link">Learn more</a>-->
-                    <!--                    </div>-->
+                </div>
+                <div class="row featurette">
+                    <div class="col-md-8 order-md-2">
+                        <h2 class="fw-light">Empower Everyone</h2>
+                        <p class=""><span class="text-muted lead">Continuous Delivery is for everyone.</span>
+                            <span class="text-primary">Facets.cloud</span> enables your DevOps, Developers, and QAs to have complete control over what
+                            goes when and where.</p>
+                    </div>
+                    <div class="col-md-4 order-md-1">
+
+                    </div>
+                </div>
+                <div class="row featurette">
+                    <div class="col-md-8">
+                        <h2 class="fw-light">Reliable and informed Releases</h2>
+                        <p class=""><span class="text-muted lead">Not just continuous but reliable too.</span> With
+                            inbuilt support for ChatOps tools, everyone is informed of any changes to your product.
+                            <span class="text-primary">Facets.cloud</span> also provides hooks to integrate your QA suites to Qualify release
+                            propagations.</p>
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
                 </div>
             </div>
-            <div class="col ">
-                <div class="card border-0 h-100">
-                    <div class="card-header bg-white py-4 text-center border-0">
-                        <h5 class="fw-bold"><i class="bi-cloud-check-fill me-2"></i>
-                            Comprehensive Day 2 Operations</h5>
+            <div class="tab-pane fade  border-1 px-5 py-5 " id="comprehensive" role="tabpanel"
+                 aria-labelledby="comprehensive-tab">
+                <div class="text-center">
+                    <p class="lead"><span class="text-primary">Facets.cloud</span> helps your teams not just with delivery but is your companion and
+                        assistant throughout running and maintaining of your Software product.</p>
+                </div>
+                <div class="mb-5 col-lg-6 mx-auto mt-5 text-center">
+                    <h1 class="display-6 ">
+                        Complete Lifecycle management for your product. </h1>
+                    <p class="lead">With the ability to deliver policies, alerts, and dashboards defined by your teams
+                        in a consistent manner <span class="text-primary">Facets.cloud</span> ensures your teams are empowered always. </p>
+                </div>
+                <div class="row featurette">
+                    <div class="col-md-8">
+                        <h2 class="fw-light">Embrace best practices faster</h2>
+                        <p class=""><span class="text-muted lead">Always up to date.</span> With <span class="text-primary">Facets.cloud</span> team
+                            working day in and day night to keep delivering the latest industry-standard compliance,
+                            security, observability, and policies, your team and product are always modern.
+                        </p>
                     </div>
-                    <div class="card-body">
-                        <p class="card-text fw-light">Facets.cloud Run-time provides a comprehensive suite of tools and
-                            processes
-                            to simplify Day 2+ operations. Agents are deployed to reduce the work required for the
-                            management of the underlying cloud and Kubernetes infrastructure of your software product.
-                            Best Practice Policies and guardrails are enforced in a consistent manner across all
-                            deployments. </p>
+                    <div class="col-md-4">
 
-                        <ul class="fw-lighter">
-                            <li class="">Pre-configured Alerts and Dashboards for Observability and
-                                Compliance
-                            </li>
-                            <li class="">Cloud Agents deployed for various purposes like log collection, spot
-                                management
-                            </li>
-                            <li class="">Extend easily while maintaining the standards using Facets
-                                interfaces
-                            </li>
-                        </ul>
                     </div>
-                    <!--                    <div class="card-body">-->
-                    <!--                        <a href="#" class="card-link">Learn more</a>-->
-                    <!--                    </div>-->
+                </div>
+                <div class="row featurette">
+                    <div class="col-md-8 order-md-2">
+                        <h2 class="fw-light">Assisted Upgrades and Backups</h2>
+                        <p class=""><span class="text-muted lead">Save time on migrations and backups.</span> With
+                            inbuilt support to give seamless upgrades to your Kubernetes cluster or any other
+                            infrastructure component managed by <span class="text-primary">Facets.cloud</span>, keeps your distractions minimal.</p>
+                    </div>
+                    <div class="col-md-4 order-md-1">
+
+                    </div>
+                </div>
+                <div class="row featurette">
+                    <div class="col-md-8">
+                        <h2 class="fw-light">Power to you</h2>
+                        <p class=""><span class="text-muted lead">Open platform.</span> With the ability to extend the
+                            functionality of all aspects of <span class="text-primary">Facets.cloud</span> product and workflow, DevOps teams are powerful
+                            than ever to innovate and deliver.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
                 </div>
             </div>
         </div>
