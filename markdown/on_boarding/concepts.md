@@ -7,7 +7,7 @@ cloud resources) and the relationships between them. The definitions reside in a
 the stack is critical for rollbacks, tracking and attribution. Each resource type has a directory named after it. Each
 resource is defined by a JSON file, usually placed in the instances directory of a resource type.
 
-<img src="/documentation/media/stack.png" width="300" >
+<img src="/media/stack.png" width="300" >
 
 
 The above example defines 4 applications (backend, frontend, rockmongo and s3demo), 1 ingress (demoingress), 1 mongodb (
