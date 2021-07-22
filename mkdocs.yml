@@ -1,6 +1,6 @@
 site_name: Facets Documentation
-site_url: https://www.facets.cloud/documentation
-site_dir: documentation
+site_url: https://docs.facets.cloud/
+site_dir: docs
 docs_dir: markdown
 google_analytics:
   - UA-194596364-1
